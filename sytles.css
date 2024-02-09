@@ -1,0 +1,174 @@
+/* defaults */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+.search {
+    background-color: white;
+    grid-column: 2;
+}
+
+.header {
+    background-color: white;
+    grid-column: 2;
+}
+
+.main {
+    background-color: rgb(232, 232, 232);
+    grid-column: 2;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template: 5% 9% 1fr / 15% 1fr;
+}
+
+/* sidebar */
+.sidebar {
+    background-color: rgb(6, 127, 192);
+    grid-row: 1 / 4;
+    color: white;
+    display: grid;
+    align-content: start;
+    padding: 15px;
+    gap: 50px;  
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.sidebar li {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.sidebar svg path {
+    fill: white;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.dashboard svg {
+    width: 30px;
+    height: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* search` */
+.search {
+    display: grid;
+    gap: 15%;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding-right: 10%;
+}
+
+.input {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.search svg {
+    width: 24px;
+    height: 24px;
+}
+
+.input svg {
+    justify-self: end;
+}
+
+.search input {
+    background-color: rgb(232, 232, 232);
+    border-radius: 1rem;
+    height: 1.5rem;
+    border: 0 solid white;
+}
+
+.search img {
+    height: 40px;
+    width: 40px;
+    border: 0px solid white;
+    border-radius: 50%;
+}
+
+.user {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.search p, .header p {
+    font-weight: bolder;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* grid-template-columns: 1fr 1fr; */
+    align-items: center;
+    padding: 0 100px;
+}
+
+.h-user {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.header img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.h-user div {
+    line-height: 1.75;
+}
+
+.greeting {
+    font-size: .75rem;
+}
+
+button {
+    background-color: rgb(6, 127, 192);
+    color: white;
+    font-size: .9rem;
+    font-weight: bold;
+    border-radius: 1.2rem;
+    width: 100px;
+    padding: .5rem 0;
+    border: 0 solid white;
+}
+
+.buttons {
+    display: flex;
+    gap: 25px;
+}
