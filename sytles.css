@@ -80,8 +80,8 @@ ul {
 /* search` */
 .search {
     display: grid;
-    gap: 15%;
-    grid-template-columns: 2fr 1fr;
+    gap: 25%;
+    grid-template-columns: 3fr 1fr;
     align-items: center;
     padding-right: 10%;
 }
@@ -117,11 +117,10 @@ ul {
 }
 
 .user {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    gap: 15px;
 }
 
 .search p, .header p {
@@ -137,13 +136,13 @@ ul {
     padding: 0 100px;
 }
 
-.h-user {
+.h-user, .trend-user {
     display: flex;
-    gap: 40px;
+    gap: 25px;
     align-items: center;
 }
 
-.header img {
+.h-user img {
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -186,6 +185,7 @@ button {
     padding: 25px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 25px;
 }
 
 .announcement-details p, .card p {
@@ -193,7 +193,7 @@ button {
 }
 
 .main h3 {
-    margin: 25px 0;
+    margin: 0 0 20px 0;
 }
 
 
@@ -203,7 +203,7 @@ hr {
 
 .card {
     height: 200px;
-    width: 350px;
+    min-width: 350px;
     background-color: white;
     border-radius: 10px;
     border-left: 10px solid orange;
@@ -211,6 +211,8 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: clamp(250px, 20%, 450px);
+    align-self: stretch;
 }
 
 .card-icons {
@@ -222,4 +224,66 @@ hr {
 .card-icons svg {
     width: 18px;
     height: 18px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: start;
+    align-content: flex-start;
+}
+
+/* this does not seem to be working. all the cards are in new rows with only one column */
+/* .projects {
+    display: grid;
+    grid-template-columns: 350px; */
+    /* grid-template-columns: minmax(250px, 1fr); */
+    /* grid-auto-columns: 350px;
+    gap: 25px;
+} */    
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.trend-user {
+    margin-bottom: 10px;
+}
+
+.trending {
+    padding: 15px, 25px; 
+}
+
+.trend-user img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.h-user div {
+    line-height: 1.75;
+}
+
+.trending p, .trending span {
+    font-size: 0.75rem;
+}
+
+.trending .bold {
+    color: black;
+    font-weight: bold;
+}
+
+.trending-details {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.trending span {
+    color: gray;
 }
